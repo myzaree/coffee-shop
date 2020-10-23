@@ -1,0 +1,67 @@
+@import 'settings';
+@import 'tools';
+
+@module: header;
+
+.@{module} {
+  border-bottom: 1px solid @border-color;
+  height: 60px;
+  padding: 0 5%;
+  .flex(center);
+
+  img {
+    height: 60px;
+    margin-bottom: 14px;
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  a {
+    color: @text-color;
+    font-size: 16px;
+    height: 100%;
+  }
+
+  ul {
+    height: 100%;
+    margin-left: 3%;
+    .flex(center);
+
+    .active::after {
+      width: 100%;
+    }
+
+    li {
+      color: @text-color;
+      cursor: pointer;
+      height: 100%;
+      list-style: none;
+      margin-right: 30px;
+      position: relative;
+      .flex(center, center);
+
+      &::after {
+        background-color: @primary-color;
+        bottom: 0;
+        box-shadow: 0px -1px 5px rgba(18, 165, 96, 0.85);
+        content: '';
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0);
+        transition: 0.3s;
+        width: 0%;
+      }
+      &:hover {
+        &::after {
+          transition: 0.3s;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
