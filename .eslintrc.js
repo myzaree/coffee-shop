@@ -29,16 +29,20 @@ module.exports = {
   rules: {
     "@typescript-eslint/camelcase": "off",
     "import/prefer-default-export": "off",
+    "no-shadow": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "@typescript-eslint/no-shadow": "error",
     'prettier/prettier': 'error'
   },
   settings: {
     'import/resolver': {
       alias: {
         map: [
-          ['@assets', './src/assets'],
           ['@components', './src/components'],
           ['@layout', './src/layout'],
-          ['@utils', './src/utils']
+          ['@store', './src/store'],
+          ['@constants', './src/constants']
         ],
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
       }

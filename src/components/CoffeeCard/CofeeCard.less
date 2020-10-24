@@ -1,0 +1,50 @@
+@import 'settings';
+@import 'tools';
+
+@module: card;
+
+.@{module} {
+  border: 1px solid @border-color;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  transition: 0.3s;
+  width: 150px;
+
+  h4 {
+    color: @text-color;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &__img {
+    border-radius: 50%;
+    height: 130px;
+    overflow: hidden;
+    width: 130px;
+    .flex(center, center);
+
+    img {
+      height: auto;
+      width: 103%;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 15px rgba(1, 0, 53, 0.1);
+    transition: 0.3s;
+  }
+}
+
+.card-active {
+  // margin-top: -10px;
+  border-color: @primary-color;
+  transition: 0.3s;
+
+  h4 {
+    color: @primary-color;
+  }
+}
