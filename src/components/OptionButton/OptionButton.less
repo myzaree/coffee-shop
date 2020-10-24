@@ -1,0 +1,26 @@
+@import 'settings';
+@import 'tools';
+
+@module: option;
+
+.@{module} {
+  border: 1px solid @border-color;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: @primary-color;
+    color: white;
+    transition: 0.2s;
+  }
+}
+
+.active-option {
+  background-color: @primary-color;
+  color: white;
+}

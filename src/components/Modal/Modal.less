@@ -1,0 +1,75 @@
+@import 'settings';
+@import 'tools';
+
+@module: modal;
+
+.@{module} {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__window {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    width: 350px;
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      width: 100%;
+      .flex(center, space-between);
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
+  &__place {
+    width: 100%;
+    .flex(center, space-between);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.place {
+  border: 1px solid @border-color;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  width: 48%;
+}
+
+.active-place {
+  background-color: @primary-color;
+  color: white;
+}

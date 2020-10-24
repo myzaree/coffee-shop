@@ -1,0 +1,73 @@
+@import 'settings';
+@import 'tools';
+
+@module: coffee;
+
+.@{module} {
+  .flex();
+  flex-wrap: wrap;
+  padding: 0 5%;
+  width: 100%;
+
+  h3 {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  h4 {
+    padding: 15px 0;
+  }
+
+  button {
+    background-color: @primary-color;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:disabled {
+      background-color: @grey;
+    }
+    &:hover {
+      box-shadow: 0px 10px 15px rgba(1, 0, 53, 0.1);
+      transition: 0.3s;
+    }
+  }
+
+  &__cards {
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 50%;
+    .flex();
+  }
+
+  &__options {
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 50%;
+  }
+
+  &__sizes {
+    .flex();
+    flex-wrap: wrap;
+
+    h4 {
+      color: @primary-color;
+      display: block;
+      margin: 5px 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__placeholder {
+    height: 80px;
+    .flex(center, center);
+  }
+}

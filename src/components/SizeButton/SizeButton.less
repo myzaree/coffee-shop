@@ -1,0 +1,34 @@
+@import 'settings';
+@import 'tools';
+
+@module: size;
+
+.@{module} {
+  border: 1px solid @border-color;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 10px 15px;
+  transition: 0.2s;
+  width: 80px;
+  .flex(center, center, column);
+
+  &__title {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    font-size: 12px;
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 15px rgba(0, 130, 72, 0.1);
+    transition: 0.3s;
+  }
+}
+
+.active-size {
+  background-color: @primary-color;
+  color: white;
+}

@@ -1,0 +1,30 @@
+@import 'settings';
+@import 'tools';
+
+@module: list;
+
+.@{module} {
+  width: 100%;
+
+  span {
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+
+  &__title {
+    .flex(center, space-between);
+  }
+
+  &__content {
+    flex-wrap: wrap;
+    width: 100%;
+    .flex();
+  }
+}
